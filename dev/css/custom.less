@@ -6,13 +6,31 @@ body
 {
 	margin:0;
 }
-div.section1
-{
-	background-image:url('../img/img_compressed.jpg');
-	background-repeat:no-repeat;
-	//background-size:contain;
-	//background-position:center;
-	//background-size: 100%;
 
-	height: 100%;
+div.section1 { 
+  background: url(http://upload.wikimedia.org/wikipedia/commons/2/26/YellowLabradorLooking_new.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  height:100%;
+  width:100%;
+
+  @media only screen and (max-width:400px)
+  {
+	background: url(../img/dog.jpg) no-repeat center center fixed; 
+	 -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+  }
+
+}
+
+div.section2
+{
+	height:400px;
+	width:100%;
+	background-color: #ccc;
 }

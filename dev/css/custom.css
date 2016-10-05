@@ -1,1 +1,1 @@
-body,html{height:100%}body{margin:0}div.section1{background-image:url(../img/img_compressed.jpg);background-repeat:no-repeat;height:100%}
+body,html{height:100%}body{margin:0}div.section1{background:url(http://upload.wikimedia.org/wikipedia/commons/2/26/YellowLabradorLooking_new.jpg) no-repeat center center fixed;background-size:cover;height:100%;width:100%}@media only screen and (max-width:400px){div.section1{background:url(../img/dog.jpg) no-repeat center center fixed;background-size:cover}}div.section2{height:400px;width:100%;background-color:#ccc}
