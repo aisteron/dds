@@ -1,4 +1,4 @@
-html, body
+html, body, div.section1
 {
 	height:100%;
 }
@@ -8,23 +8,48 @@ body
 }
 
 div.section1 { 
-  background: url(http://upload.wikimedia.org/wikipedia/commons/2/26/YellowLabradorLooking_new.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-
-  height:100%;
-  width:100%;
-
-  @media only screen and (max-width:400px)
-  {
-	background: url(../img/dog.jpg) no-repeat center center fixed; 
-	 -webkit-background-size: cover;
+	div.slide1
+	{
+	  background: url(../img/img_compressed.jpg) no-repeat center center fixed; 
+	  -webkit-background-size: cover;
 	  -moz-background-size: cover;
 	  -o-background-size: cover;
 	  background-size: cover;
-  }
+
+	  height:100%;
+	  width:100%;
+
+	  @media only screen and (max-width:400px)
+	  {
+		 background: url(../img/hs_320-568.jpg) no-repeat center center fixed; 
+		 -webkit-background-size: cover;
+		 -moz-background-size: cover;
+		 -o-background-size: cover;
+		 background-size: cover;
+	  }
+	}
+
+	div.slide2
+	{
+	  background: url(../img/hs2.jpg) no-repeat center center; 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+
+	  height:100%;
+	  width:100%;
+
+	  @media only screen and (max-width:400px)
+	  {
+		 background: url(../img/hs2_320-568.jpg) no-repeat center center; 
+		 -webkit-background-size: cover;
+		 -moz-background-size: cover;
+		 -o-background-size: cover;
+		 background-size: cover;
+	  }
+	}
+  
 
 }
 
@@ -34,3 +59,27 @@ div.section2
 	width:100%;
 	background-color: #ccc;
 }
+
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
