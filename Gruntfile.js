@@ -33,6 +33,26 @@ module.exports = function (grunt)
 			    }
 			  }
 			},
+	concat: {
+			dist:
+			{
+				src:['dev/css/custom.css', 'dev/css/swiper.min.css'],
+				dest:'dev/css/concat.css'
+			}
+  },		
+	criticalcss: {
+        custom: {
+            options: {
+                url: "http://127.0.0.1:8080/",
+                width: 1200,
+                height: 900,
+                outputfile: "dev/css/critical.css",
+                filename: 'dev/css/concat.css',
+                buffer: 800*1024,
+                ignoreConsole: false
+            }
+        }
+    },
 	watch:
 	{
 		css:
@@ -59,6 +79,8 @@ module.exports = function (grunt)
 	grunt.loadNpmTasks('grunt-contrib-pug');
 	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-criticalcss');
+	grunt.loadNpmTasks('grunt-contrib-concat');
 
-	grunt.registerTask('default',['pug','less','watch'])
+	grunt.registerTask('default',['pug','less','concat','watch'])
 };

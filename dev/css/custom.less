@@ -5,9 +5,11 @@ html, body, div.section1
 body
 {
 	margin:0;
+	font-family:Arial, sans-serif;
 }
 
-div.section1 { 
+div.section1 
+{ 
 	div.slide1
 	{
 	  background: url(../img/img_compressed.jpg) no-repeat center center fixed; 
@@ -27,6 +29,12 @@ div.section1 {
 		 -o-background-size: cover;
 		 background-size: cover;
 	  }
+	  	span
+	  	{
+	  		font-size:5em;
+	  		color:#fff;
+	  		text-shadow:1px 1px 10px #111;
+	  	}
 	}
 
 	div.slide2
@@ -49,16 +57,29 @@ div.section1 {
 		 background-size: cover;
 	  }
 	}
-  
 
+	div.slide3
+	{
+	  background: url(../img/hs3.jpg) no-repeat center center; 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+
+	  height:100%;
+	  width:100%;
+
+	  @media only screen and (max-width:400px)
+	  {
+		 background: url(../img/hs3_320-568.jpg) no-repeat center center; 
+		 -webkit-background-size: cover;
+		 -moz-background-size: cover;
+		 -o-background-size: cover;
+		 background-size: cover;
+	  }
+	}
 }
 
-div.section2
-{
-	height:400px;
-	width:100%;
-	background-color: #ccc;
-}
 
     .swiper-container {
         width: 100%;
@@ -83,3 +104,13 @@ div.section2
         -webkit-align-items: center;
         align-items: center;
     }
+
+
+
+/*section2*/
+div.section2
+{
+	height:400px;
+	width:100%;
+	background-color: #ccc;
+}

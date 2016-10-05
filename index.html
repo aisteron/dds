@@ -1,12 +1,40 @@
-<!DOCTYPE html><html lang="en"><head><title>pageTitle</title><link rel="stylesheet" href="dev/css/custom.css"><link rel="stylesheet" href="dev/css/swiper.min.css"><meta name="viewport" content="width=device-width initial-scale=1.0"><script src="http://code.jquery.com/jquery-1.12.4.min.js"></script><script src="dev/js/swiper.min.js"></script><script src="dev/js/custom.js"></script></head><body><div class="section1"><div class="swiper-container">
-<div class="swiper-wrapper">
-<div class="swiper-slide slide1">Slide 1</div>
-<div class="swiper-slide slide2">Slide 2</div>
-<div class="swiper-slide slide3">Slide 3</div>
-<div class="swiper-slide slide4">Slide 4</div>
-<div class="swiper-slide slide5">Slide 5</div>
-</div>
-<div class="swiper-pagination"></div>
-<div class="swiper-button-next"></div>
-<div class="swiper-button-prev"></div>
-</div>	</div><div class="section2"></div></body></html>
+<!DOCTYPE html><html lang="ru"><head><title>pageTitle</title><link rel="stylesheet" href="dev/css/concat.css"><meta name="viewport" content="width=device-width initial-scale=1.0"><meta charset="utf-8"></head><body><div class="section1"><div class="swiper-container"><div class="swiper-wrapper"><div class="swiper-slide slide1"><span>ПОСТРОИМ ДОМ ЗА 200 ТЫС.РУБЛЕЙ</span></div><div class="swiper-slide">Slide2</div><div class="swiper-slide">Slide3</div><div class="swiper-slide">Slide4</div><div class="swiper-slide">Slide5</div></div><div class="swiper-pagination"></div><div class="swiper-button-next"></div><div class="swiper-button-prev"></div></div></div><div class="section2"><h2>Не теряйте времени, заказывайте сейчас!</h2></div><script>function loadscripts()
+{
+
+var tag = document.createElement("script");
+tag.src = "http://code.jquery.com/jquery-1.12.4.min.js";
+/*onload event*/
+tag.onload = function()
+	{
+		console.log('jquery loaded');
+
+		var swiper = document.createElement("script");
+		swiper.src = "dev/js/swiper.min.js";
+		/*onload event*/
+		swiper.onload = function()
+		{
+			var custom = document.createElement("script");
+			custom.src = "dev/js/custom.js";
+			document.getElementsByTagName("head")[0].appendChild(custom);
+		}
+		document.getElementsByTagName("head")[0].appendChild(swiper);
+
+
+		
+	}
+document.getElementsByTagName("head")[0].appendChild(tag);
+
+
+
+
+/*lazy loading CSS*/
+var tag = document.createElement("link");
+tag.rel = "stylesheet";
+tag.href = "dev/css/swiper.min.css";
+document.getElementsByTagName("head")[0].appendChild(tag);
+
+
+
+console.log('extra scripts are loaded');	
+}
+setTimeout(loadscripts, 2000);</script></body></html>
