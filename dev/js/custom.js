@@ -18,5 +18,20 @@ $(this).addClass('slide'+index);
 
 setTimeout(addphoto, 2000);
 
+/*prevent lift up page on close popup*/
+
+$('#popup1 > div > a').click(function(e)
+{
+    window.location = '#close'
+    e.preventDefault();
+});
+
+$('div.buttongroup button').click(function(){
+
+	window.location='#popup1';
+	var spanText = $(this).find('span').text();
+	$('div.popup h2').text(spanText);
+})
+
 })
     

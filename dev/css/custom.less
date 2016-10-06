@@ -1,3 +1,10 @@
+@red:#eb4947;
+@green:#5cb85c;
+@blue:#5bc0de;
+
+@import "section2.less";
+
+
 html, body, div.section1
 {
 	height:100%;
@@ -7,7 +14,22 @@ body
 	margin:0;
 	font-family:Arial, sans-serif;
 }
-
+div.topheader
+{
+	position: fixed;
+	height:70px;
+	width: 100%;
+	background-color: rgba(0,0,0,.5);
+	z-index: 2;
+	color:#fff;
+	display:flex;
+	justify-content:space-around;
+	align-items:center;
+	img
+	{
+		width:54px;
+	}
+}
 div.section1 
 { 
 	div.slide1
@@ -29,12 +51,7 @@ div.section1
 		 -o-background-size: cover;
 		 background-size: cover;
 	  }
-	  	span
-	  	{
-	  		font-size:5em;
-	  		color:#fff;
-	  		text-shadow:1px 1px 10px #111;
-	  	}
+	  
 	}
 
 	div.slide2
@@ -78,6 +95,31 @@ div.section1
 		 background-size: cover;
 	  }
 	}
+
+		h1.header
+	  	{
+	  		font-size:5em;
+	  		color:#fff;
+	  		text-shadow:1px 1px 10px #111;
+	  		padding:1em;
+	  		@media only screen and (max-width:400px)
+	  		{
+	  			font-size:2em;
+	  		}
+	  	}
+
+	  	p.red
+		{
+			    text-transform: uppercase;
+			    border: 1px solid @red;
+			    position: absolute;
+			    bottom: 20%;
+			    color: #fff;
+			    background-color: @red;
+			    padding: 1em;
+			    border-radius: 1em;
+		}
+	
 }
 
 
@@ -104,13 +146,3 @@ div.section1
         -webkit-align-items: center;
         align-items: center;
     }
-
-
-
-/*section2*/
-div.section2
-{
-	height:400px;
-	width:100%;
-	background-color: #ccc;
-}

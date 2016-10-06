@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="ru"><head><title>pageTitle</title><link rel="stylesheet" href="dev/css/concat.css"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"></head><body><div class="section1"><div class="swiper-container"><div class="swiper-wrapper"><div class="swiper-slide slide1"><span>ПОСТРОИМ ДОМ ЗА 200 ТЫС.РУБЛЕЙ</span></div><div class="swiper-slide">Slide2</div><div class="swiper-slide">Slide3</div><div class="swiper-slide">Slide4</div><div class="swiper-slide">Slide5</div></div><div class="swiper-pagination"></div><div class="swiper-button-next"></div><div class="swiper-button-prev"></div></div></div><div class="section2"><h2>Не теряйте времени, заказывайте сейчас!</h2></div><script>function loadscripts()
+<!DOCTYPE html><html lang="ru"><head><title>pageTitle</title><link rel="stylesheet" href="dev/css/concat.css"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"></head><body><div class="section1"><div class="topheader"><span><img src="dev/img/wlogo.png"></span><span class="tel">+7 (843) 202 34 49</span></div><div class="swiper-container"><div class="swiper-wrapper"><div class="swiper-slide slide1"><h1 class="header">ПОСТРОИМ ДОМ ЗА 200 000 РУБ.</h1><p class="red">получить каталог домов	</p></div><div class="swiper-slide">Slide2</div><div class="swiper-slide">Slide3</div><div class="swiper-slide">Slide4</div><div class="swiper-slide">Slide5</div></div><div class="swiper-pagination"></div><div class="swiper-button-next"></div><div class="swiper-button-prev"></div></div></div><div class="section2"><p class="fheader">Не теряйте времени, заказывайте сейчас!<br>
++7 (843) 202 34 49</p><p class="desc">В скором времени <b>ожидается подорожание</b> каркасных домов дачной серии. <br>Не оттягивайте переезд в свой собственный дом.</p><div class="buttongroup"><button class="green"><i class="fa fa-star" aria-hidden="true"></i><span>Заказать полный каталог</span></button><button class="blue"><i class="fa fa-check" aria-hidden="true"></i><span>Оставить заявку</span></button><button class="red"><i class="fa fa-phone" aria-hidden="true"></i><span>Заказать звонок</span></button></div><!--popup--><div class="overlay" id="popup1"><div class="popup"><h2>Получите полный каталог домов бесплатно</h2><a class="close" href="#">&times;		</a><div class="content"> <form class="form"><input name="name" required type="text" placeholder="Ваше имя"><input name="phone" required type="text" placeholder="Ваш телефон"><input type="submit" value="Отправить"></form></div></div></div></div><script>function loadscripts()
 {
 
 var tag = document.createElement("script");
@@ -16,6 +17,10 @@ tag.onload = function()
 			var custom = document.createElement("script");
 			custom.src = "dev/js/custom.js";
 			document.getElementsByTagName("head")[0].appendChild(custom);
+
+			var font = document.createElement("script");
+			font.src = "https://use.fontawesome.com/b67eda653c.js";
+			document.getElementsByTagName("head")[0].appendChild(font);
 		}
 		document.getElementsByTagName("head")[0].appendChild(swiper);
 
@@ -28,11 +33,12 @@ document.getElementsByTagName("head")[0].appendChild(tag);
 
 
 /*lazy loading CSS*/
+/*
 var tag = document.createElement("link");
 tag.rel = "stylesheet";
 tag.href = "dev/css/swiper.min.css";
 document.getElementsByTagName("head")[0].appendChild(tag);
-
+*/
 
 
 console.log('extra scripts are loaded');	

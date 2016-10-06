@@ -57,8 +57,8 @@ module.exports = function (grunt)
 	{
 		css:
 		{
-			files:['dev/css/custom.less'],
-			tasks:['less'],
+			files:['dev/css/custom.less', 'dev/css/section2.less'],
+			tasks:['less', 'concat'],
 			options: {
 		      livereload: true,
 		    }
