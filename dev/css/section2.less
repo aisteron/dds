@@ -11,6 +11,16 @@ div.section2
 	    padding: 1em;
 	    font-size: 2em;
 	    text-align: center;
+	    margin-bottom:0;
+	    padding-bottom:0;
+	    + a 
+	    {
+	    	font-size: 2em;
+	    	color:@blue;
+	    	text-decoration: none;
+	    	text-align: center;
+	    	display:inherit;
+	    }
 	}
 	p.desc
 	{
@@ -20,6 +30,16 @@ div.section2
 		{
 			display:flex;
 			justify-content:center;
+
+			@media only screen and (max-width:600px)
+			{
+				flex-wrap:wrap;
+
+				button
+				{
+					margin:1em;
+				}
+			}
 
 			button.green{background-color: @green; &:hover{background-color: darken(@green, 20%);}}
 			button.blue{background-color: @blue;&:hover{background-color: darken(@blue, 20%);}}

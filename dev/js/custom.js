@@ -33,5 +33,12 @@ $('div.buttongroup button').click(function(){
 	$('div.popup h2').text(spanText);
 })
 
-})
-    
+
+
+/*lazyload plugin event*/
+document.addEventListener('lazyincluded', function(e){
+
+});
+
+
+});
