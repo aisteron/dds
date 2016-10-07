@@ -5,6 +5,11 @@ html(lang="ru")
 		link(rel='stylesheet' href='dev/css/concat.css')
 		meta(name="viewport" content="width=device-width, initial-scale=1.0")
 		meta(charset="utf-8")
+		style.
+			div.lazyload
+			{
+				min-height:300px;
+			}	
 	body
 		div.section1
 			div.topheader
@@ -61,7 +66,9 @@ html(lang="ru")
 							input(type='submit' value='Отправить')
 
 		div.section3.lazyload(data-include="dev/sections/section3.html")
-</div>
+		div.section4.lazyload(data-include="dev/sections/section4.html")
+		div.section5.lazyload(data-include="dev/sections/section5.html")
+		div.section6.lazyload(data-include="dev/sections/section6.html")
 				
 		script.
 			function loadscripts()
@@ -99,12 +106,6 @@ html(lang="ru")
 				var include = document.createElement("script");
 				include.src = "dev/js/ls.include.min.js";
 				document.getElementsByTagName("head")[0].appendChild(include);
-
-				var appear = document.createElement("script");
-				appear.src = "dev/js/jquery.appear.js";
-				document.getElementsByTagName("head")[0].appendChild(appear);
-
-
 					
 				}
 			document.getElementsByTagName("head")[0].appendChild(tag);

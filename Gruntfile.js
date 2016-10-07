@@ -13,7 +13,10 @@ module.exports = function (grunt)
 		    },
 		    files: {
 		      'index.html': ['dev/index.pug'],
-		      'dev/sections/section3.html': ['dev/sections/section3.pug']
+		      'dev/sections/section3.html': ['dev/sections/section3.pug'],
+		      'dev/sections/section4.html': ['dev/sections/section4.pug'],
+		      'dev/sections/section5.html': ['dev/sections/section5.pug'],
+		      'dev/sections/section6.html': ['dev/sections/section6.pug']
 
 		    }
 		  }
@@ -60,6 +63,9 @@ module.exports = function (grunt)
 		{
 			files:['dev/css/custom.less', 
 			'dev/css/section2.less', 
+			'dev/css/section6.less', 
+			'dev/css/section5.less', 
+			'dev/css/section4.less', 
 			'dev/css/section3.less'],
 			tasks:['less', 'concat'],
 			options: {
@@ -68,7 +74,11 @@ module.exports = function (grunt)
 		},
 		scripts:
 		{
-			files:['dev/index.pug', 'dev/sections/section3.pug'],
+			files:['dev/index.pug',
+			'dev/sections/section6.pug', 
+			'dev/sections/section5.pug', 
+			'dev/sections/section4.pug', 
+			'dev/sections/section3.pug'],
 			tasks:['pug'],
 			options: {
 		      livereload: true,

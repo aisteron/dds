@@ -1,0 +1,81 @@
+.section4
+{
+  h3
+  {
+    padding:1em;
+    font-size:2em;
+    margin:0;
+
+  }
+  h3,h4
+  {
+    text-align:center;
+    color:#fff;
+  }
+  h4
+  {
+    margin-top:0;
+  }
+  div.wrap
+  {
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+
+    div.wraphex
+    {
+      flex-basis:200px;
+
+      p.phead
+      {
+        font-size: 2em;
+        color:#fff;
+        text-align: center;
+      }
+      p.desc
+      {
+        color:#fff;
+        text-align: center;
+      }
+    }
+  }
+  .hexagon {
+  position: relative;
+  width: 150px; 
+  height: 86.60px;
+  background-color: @red;
+  margin: 43.30px 0;
+  left:20px;
+        
+        i
+        {
+              position: absolute;
+              top: 24px;
+              left: 52px;
+              font-size: 3em;
+        }
+}
+
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 75px solid transparent;
+  border-right: 75px solid transparent;
+}
+
+.hexagon:before {
+  bottom: 100%;
+  border-bottom: 43.30px solid @red;
+}
+
+.hexagon:after {
+  top: 100%;
+  width: 0;
+  border-top: 43.30px solid @red;
+}
+
+
+
+}

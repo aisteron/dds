@@ -20,7 +20,7 @@ setTimeout(addphoto, 2000);
 
 /*prevent lift up page on close popup*/
 
-$('#popup1 > div > a').click(function(e)
+$('.overlay a').click(function(e)
 {
     window.location = '#close'
     e.preventDefault();
@@ -35,8 +35,47 @@ $('div.buttongroup button').click(function(){
 
 
 
+
+
+	
+
+
+
 /*lazyload plugin event*/
 document.addEventListener('lazyincluded', function(e){
+
+
+	/*popup house photo*/	
+	$('.house img').bind('click', function(){
+		window.location='#popup2';
+		var res = $(this).attr('src').replace('00','b00');
+		$('div#popup2 img').attr('src', res);
+	});
+
+	$('div.rightside button').bind('click', function(){
+		window.location='#popup1';
+		$('div.popup h2').html('Оставьте свои контакты<br> и мы вам перезвоним');
+
+	})
+
+	$('div.section6 div.buttongroup button').bind("click",function(){
+
+	window.location='#popup1';
+	var spanText = $(this).find('span').text();
+	$('div.popup h2').text(spanText);
+
+
+})
+
+					var swiper = new Swiper('.swiper-container_test', 
+					{
+				        pagination: '.swiper-pagination',
+				        paginationClickable: true,
+				        nextButton: '.swiper-button-next',
+				        prevButton: '.swiper-button-prev',
+				        autoplay: 2500,
+				        spaceBetween: 30
+				    });
 
 });
 

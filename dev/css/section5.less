@@ -1,0 +1,92 @@
+.section5
+{
+	h3,h4 {text-align:center}
+	h3 {color:@red;font-size:2em}
+	
+	.house
+	{
+		display:flex;
+		flex-wrap:wrap;
+		justify-content:center;
+		&:not(:first-of-type)
+		{
+			border-top: 1px solid #dedede;
+		    padding-top: 3em;
+		    padding-bottom: 3em;
+		}
+		&:first-of-type
+		{
+			padding-bottom: 3em;
+		}
+		
+		div.rightside
+		{
+			
+			p.htitle, p.utitle{text-align:center;}
+			p.htitle{font-size:1.5em;margin-top:0}
+			button
+			{
+				    padding: .7em;
+				    color: #fff;
+				    border: none;
+				    border-radius: 6px;
+				    display: block;
+				    margin: 1em;
+				    cursor: pointer;
+				    float:left;
+
+				    .fa:before
+				    {
+				    	padding:1em;
+				    }
+
+				    
+				    
+			}
+					button.green{background-color: @green}
+				    button.red{background-color: @red}
+		}
+		div.leftside
+		{
+			div.thumbs
+			{
+				display: flex;
+    			justify-content: space-between;
+			}
+			img 
+			{
+				cursor:pointer;
+			}
+		}
+		
+	}
+
+
+
+
+.popupimg {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 80%;
+  position: relative;
+  transition: all 5s ease-in-out;
+  
+  img
+  {
+  	width: 100%;
+  }
+  
+  a.close
+  {
+  	float:right;
+  	color:@red;
+  }
+
+
+}
+
+
+
+}
