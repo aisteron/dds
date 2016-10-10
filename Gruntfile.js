@@ -16,7 +16,9 @@ module.exports = function (grunt)
 		      'dev/sections/section3.html': ['dev/sections/section3.pug'],
 		      'dev/sections/section4.html': ['dev/sections/section4.pug'],
 		      'dev/sections/section5.html': ['dev/sections/section5.pug'],
-		      'dev/sections/section6.html': ['dev/sections/section6.pug']
+		      'dev/sections/section6.html': ['dev/sections/section6.pug'],
+		      'dev/sections/section7.html': ['dev/sections/section7.pug'],
+		      'dev/sections/section8.html': ['dev/sections/section8.pug']
 
 		    }
 		  }
@@ -63,6 +65,8 @@ module.exports = function (grunt)
 		{
 			files:['dev/css/custom.less', 
 			'dev/css/section2.less', 
+			'dev/css/section8.less', 
+			'dev/css/section7.less', 
 			'dev/css/section6.less', 
 			'dev/css/section5.less', 
 			'dev/css/section4.less', 
@@ -75,6 +79,8 @@ module.exports = function (grunt)
 		scripts:
 		{
 			files:['dev/index.pug',
+			'dev/sections/section8.pug', 
+			'dev/sections/section7.pug', 
 			'dev/sections/section6.pug', 
 			'dev/sections/section5.pug', 
 			'dev/sections/section4.pug', 

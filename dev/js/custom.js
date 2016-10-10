@@ -36,13 +36,20 @@ $('div.buttongroup button').click(function(){
 
 
 
-
-	
-
-
-
 /*lazyload plugin event*/
 document.addEventListener('lazyincluded', function(e){
+
+				var flag = true;
+				if ($('#map').length && flag) 
+				{
+
+    					var map = document.createElement("script");
+						map.src = "https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=0R88SZ1mKcCGzgiltKO-qOHEtX36baUe&amp;width=100%&amp;height=450&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true";
+						document.getElementById("map").appendChild(map);
+						flag = false;
+				}
+
+						
 
 
 	/*popup house photo*/	
