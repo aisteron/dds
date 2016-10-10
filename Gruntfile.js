@@ -102,4 +102,5 @@ module.exports = function (grunt)
 	grunt.loadNpmTasks('grunt-contrib-concat');
 
 	grunt.registerTask('default',['pug','less','concat','watch'])
+	grunt.registerTask('crit',['criticalcss'])
 };

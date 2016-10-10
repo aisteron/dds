@@ -1,3 +1,120 @@
+div.section2 {
+  width: 100%;
+  background-color: rgb(251, 251, 251);
+  background-color: #fbfbfb;
+}
+
+div.section2 p.fheader {
+  margin-top: 0px;
+  padding: 1em 1em 0px;
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 0px;
+  margin-top: 0;
+  padding: 1em;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.overlay {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: rgba(0, 0, 0, 0.701961);
+  transition: opacity 0.5s;
+  -webkit-transition: opacity 0.5s;
+  visibility: hidden;
+  opacity: 0;
+  background-position: initial initial;
+  background-repeat: initial initial;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,.7);
+  transition: opacity .5s;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background-color: rgb(255, 255, 255);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  width: 400px;
+  position: relative;
+  transition: all 5s ease-in-out;
+  -webkit-transition: all 5s ease-in-out;
+  background-position: initial initial;
+  background-repeat: initial initial;
+  background: #fff;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 400px) {
+  .popup {
+    width: 86%;
+  }
+
+  .popup h2 {
+    font-size: 1em;
+  }
+}
+
+.popup .form input {
+  display: block;
+  padding: 1em;
+  margin: 0.3em auto;
+  margin: .3em auto;
+}
+
+.popup h2 {
+  margin-top: 0px;
+  color: rgb(51, 51, 51);
+  font-family: Tahoma, Arial, sans-serif;
+  text-align: center;
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma,Arial,sans-serif;
+}
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  font-size: 30px;
+  font-weight: 700;
+  text-decoration: none;
+  color: rgb(51, 51, 51);
+  transition: all .2s;
+  color: #333;
+  color: #eb4947;
+}
+
+.popup .close {
+  color: rgb(235, 73, 71);
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all .2s;
+  font-size: 30px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #333;
+  color: #eb4947;
+}
+
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
 body,
 div.section1,
 html {
@@ -9,6 +126,27 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   font-family: Arial,sans-serif;
+}
+
+div.topheader {
+  position: fixed;
+  height: 70px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.498039);
+  z-index: 2;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0,0,0,.5);
+  color: #fff;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+div.topheader img {
+  width: 54px;
 }
 
 div.section1 div.slide1 {
@@ -32,12 +170,38 @@ div.section1 div.slide1 {
   }
 }
 
-div.section1 div.slide1 span {
+div.section1 h1.header {
   font-size: 5em;
   color: rgb(255, 255, 255);
   text-shadow: rgb(17, 17, 17) 1px 1px 10px;
+  padding: 1em;
   color: #fff;
   text-shadow: 1px 1px 10px #111;
+}
+
+@media only screen and (max-width: 400px) {
+  div.section1 h1.header {
+    font-size: 2em;
+  }
+}
+
+div.section1 p.red {
+  text-transform: uppercase;
+  border: 1px solid rgb(235, 73, 71);
+  position: absolute;
+  bottom: 20%;
+  color: rgb(255, 255, 255);
+  background-color: rgb(235, 73, 71);
+  padding: 1em;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
+  border-bottom-left-radius: 1em;
+  cursor: pointer;
+  border: 1px solid #eb4947;
+  color: #fff;
+  background-color: #eb4947;
+  border-radius: 1em;
 }
 
 .swiper-container {
@@ -55,13 +219,6 @@ div.section1 div.slide1 span {
   background-color: rgb(255, 255, 255);
   background-position: initial initial;
   background-repeat: initial initial;
-  background: #fff;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-flex-shrink: 0;
   -ms-flex: 0 0 auto;
   flex-shrink: 0;
@@ -75,8 +232,6 @@ div.section1 div.slide1 span {
   position: relative;
   overflow: hidden;
   z-index: 1;
-  width: 100%;
-  height: 100%;
   margin: 0 auto;
 }
 
@@ -128,15 +283,6 @@ div.section1 div.slide1 span {
   width: 100%;
   height: 100%;
   position: relative;
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -ms-flex-align: center;
-  align-items: center;
   -ms-flex: 0 0 auto;
   flex-shrink: 0;
 }
