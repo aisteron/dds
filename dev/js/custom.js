@@ -65,6 +65,12 @@ document.addEventListener('lazyincluded', function(e){
 
 	})
 
+	$('p.red').bind('click', function(){
+		window.location='#popup1';
+		$('div.popup h2').html('Оставьте свои контакты<br> и мы пришлем вам каталог домов');
+
+	})
+
 	$('div.section6 div.buttongroup button').bind("click",function(){
 
 	window.location='#popup1';
